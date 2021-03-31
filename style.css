@@ -22,17 +22,14 @@ body {
 }
 
 h1 {
+  color: var(--dark-magenta);
+  max-width: 75%;
   font-weight: 700;
   font-size: 2.5rem;
 }
 
 .claim-and-rating {
   display: flex;
-}
-
-.claim h1 {
-  color: var(--dark-magenta);
-  max-width: 75%;
 }
 
 .claim p {
@@ -143,4 +140,68 @@ h1 {
 }
 .attribution a {
   color: var(--dark-magenta);
+}
+
+@media (max-width: 375px) {
+  body {
+    background: url(./images/bg-pattern-top-mobile.svg) no-repeat left
+        top,
+      url(./images//bg-pattern-bottom-mobile.svg) no-repeat right
+        bottom;
+    padding: 5rem 1.5rem;
+    text-align: center;
+    font-size: 0.875rem;
+  }
+
+  .claim-and-rating {
+    flex-direction: column;
+  }
+
+  h1 {
+    max-width: 100%;
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  .claim p {
+    max-width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .ratings-container {
+    margin-top: 2.5rem;
+  }
+
+  .rating {
+    width: 100%;
+  }
+
+  .rating:last-child {
+    margin-bottom: 0;
+  }
+
+  .rating p {
+    display: inline-block;
+    margin-left: 0;
+    margin-top: 0.7rem;
+  }
+
+  .reviews-container {
+    flex-direction: column;
+    margin-top: 2.5rem;
+  }
+
+  .review {
+    margin-right: 0rem;
+    text-align: left;
+  }
+
+  .review > p {
+    line-height: 1.4rem;
+    font-size: 0.785rem;
+  }
+
+  .reviewer-info img {
+    margin-right: 1.4rem;
+  }
 }

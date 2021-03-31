@@ -1,7 +1,146 @@
+:root {
+  --dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Spartan', sans-serif;
+  font-size: 0.9375rem;
+  padding: 8rem 8rem 0 8rem;
+  background: url(./images/bg-pattern-top-desktop.svg) no-repeat left
+      top,
+    url(./images//bg-pattern-bottom-desktop.svg) no-repeat right
+      bottom;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.claim-and-rating {
+  display: flex;
+}
+
+.claim h1 {
+  color: var(--dark-magenta);
+  max-width: 75%;
+}
+
+.claim p {
+  color: var(--dark-grayish-magenta);
+  font-weight: 500;
+  max-width: 80%;
+  margin-top: 0.5rem;
+  line-height: 1.5rem;
+}
+
+.claim,
+.ratings-container {
+  flex: 1 0;
+}
+
+.ratings-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.rating {
+  font-weight: 700;
+  color: var(--dark-magenta);
+  width: 80%;
+  background-color: var(--light-grayish-magenta);
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  margin: 0.5rem 0;
+}
+
+.rating img {
+  margin-left: 0.3rem;
+}
+
+.rating p {
+  display: inline-block;
+  margin-left: 2rem;
+}
+
+.rating:first-child {
+  align-self: flex-start;
+}
+
+.rating:nth-child(2) {
+  align-self: center;
+}
+
+.rating:last-child {
+  align-self: flex-end;
+}
+
+.reviews-container {
+  display: flex;
+  margin: 5rem 0;
+}
+
+.review {
+  background-color: var(--dark-magenta);
+  color: var(--light-grayish-magenta);
+  border-radius: 12px;
+  padding: 2.5rem 2rem;
+  margin-right: 2rem;
+}
+
+.review:nth-child(2) {
+  position: relative;
+  top: 20px;
+}
+
+.review:last-child {
+  margin-right: 0;
+  position: relative;
+  top: 40px;
+}
+
+.review > p {
+  line-height: 1.7rem;
+  font-size: 0.875rem;
+}
+
+.reviewer-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.reviewer-info img {
+  border-radius: 50%;
+  max-width: 40px;
+  margin-right: 2rem;
+}
+
+.name-and-status p:first-child {
+  font-weight: 500;
+  margin-bottom: 0.2rem;
+}
+
+.name-and-status p:nth-child(2) {
+  font-weight: 400;
+  color: var(--soft-pink);
+  opacity: 0.9;
+  font-size: 0.875rem;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: var(--dark-magenta);
 }
